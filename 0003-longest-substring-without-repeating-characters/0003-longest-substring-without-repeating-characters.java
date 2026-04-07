@@ -7,7 +7,6 @@ class Solution {
         while(r < s.length()){
             if(l <= dp[s.charAt(r)]){
                 l = 1 + dp[s.charAt(r)];
-                dp[s.charAt(r)] = -1;
             }
             dp[s.charAt(r)] = r;
             maxlen = Math.max(maxlen,r-l+1);
